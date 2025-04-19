@@ -63,7 +63,8 @@
                 <nav class="d-none d-md-flex gap-4 align-items-center">
                     <a href="{% url 'blog:index' %}" class="text-decoration-none text-dark">Home</a>
                     {% if user.is_authenticated %}
-                    <a href="{% url 'accounts:profile' user.id %}" class="text-decoration-none text-dark">Profile</a>
+                    <a href="{% url 'accounts:profile' user.username %}"
+                        class="text-decoration-none text-dark">Profile</a>
                     <a href="{% url 'blog:create_post' %}" class="text-decoration-none text-dark">Create Post</a>
                     {% endif %}
 
@@ -111,7 +112,7 @@
                 <div class="d-flex flex-column gap-3">
                     <a href="{% url 'blog:index' %}" class="text-decoration-none fs-5 text-dark">Home</a>
                     {% if user.is_authenticated %}
-                    <a href="{% url 'accounts:profile' user.id%}"
+                    <a href="{% url 'accounts:profile' user.username %}"
                         class="text-decoration-none fs-5 text-dark">Profile</a>
                     {% endif %}
                     <a href="{% url 'blog:create_post' %}" class="text-decoration-none fs-5 text-dark">Create Post</a>
