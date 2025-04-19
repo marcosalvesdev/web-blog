@@ -42,3 +42,7 @@ As soon as the blog is live, a link will be shared here. You’ll be able to sig
 
 Thanks for stopping by! 🚀  
 Let’s build something amazing together.
+
+## 🛠️ For Developers
+
+If you're a developer and want to run this project locally or contribute, check out the [DEVELOPMENT.md](DEVELOPMENT.md) file for setup instructions and guidelines.
