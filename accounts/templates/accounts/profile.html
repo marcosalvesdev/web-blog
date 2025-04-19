@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Profile Header -->
+            <div class="card border-light shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center">
+                        <div class="position-relative">
+                            {% if user.profile.avatar %}
+                            <img src="{{ user.profile.avatar.url }}" alt="Profile Picture" class="rounded-circle"
+                                style="width: 120px; height: 120px; object-fit: cover;">
+                            {% else %}
+                            <img src="{% static 'accounts/images/default-avatar.png' %}" alt="Default Profile Picture"
+                                class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover;">
+                            {% endif %}
+                            {% if user == request.user %}
+                            <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0" data-bs-toggle="modal"
+                                data-bs-target="#updateAvatarModal">
+                                <i class="bi bi-camera"></i>
+                            </button>
+                            {% endif %}
+                        </div>
+                        <div class="ms-4">
+                            <h1 class="display-6 fw-bold mb-1">{{ user.get_full_name|default:user.username }}</h1>
+                            <p class="text-muted mb-2">@{{ user.username }}</p>
+                            {% if user.profile.bio %}
+                            <p class="mb-0">{{ user.profile.bio }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Information -->
+            <div class="card border-light shadow-sm">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="h5 fw-bold mb-0">Profile Information</h2>
+                        {% if user == request.user %}
+                        <a href="{% url 'accounts:login' %}" class="btn btn-sm btn-outline-dark">
+                            <i class="bi bi-pencil me-1"></i> Edit Profile
+                        </a>
+                        {% endif %}
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Personal Information -->
+                        <div class="col-12">
+                            <h3 class="h6 fw-bold mb-3">Personal Information</h3>
+                            <div class="row g-3">
+                                {% if user.first_name or user.last_name %}
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Full Name</p>
+                                    <p class="mb-0">{{ user.get_full_name }}</p>
+                                </div>
+                                {% endif %}
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Email</p>
+                                    <p class="mb-0">{{ user.email }}</p>
+                                </div>
+                                {% if user.profile.location %}
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Location</p>
+                                    <p class="mb-0">{{ user.profile.location }}</p>
+                                </div>
+                                {% endif %}
+                                {% if user.profile.website %}
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Website</p>
+                                    <p class="mb-0">
+                                        <a href="{{ user.profile.website }}" target="_blank"
+                                            class="text-decoration-none">{{ user.profile.website }}</a>
+                                    </p>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        {% if user.profile.interests or user.profile.occupation %}
+                        <div class="col-12">
+                            <h3 class="h6 fw-bold mb-3">Additional Information</h3>
+                            <div class="row g-3">
+                                {% if user.profile.occupation %}
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Occupation</p>
+                                    <p class="mb-0">{{ user.profile.occupation }}</p>
+                                </div>
+                                {% endif %}
+                                {% if user.profile.interests %}
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Interests</p>
+                                    <p class="mb-0">{{ user.profile.interests }}</p>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- Account Information -->
+                        <div class="col-12">
+                            <h3 class="h6 fw-bold mb-3">Account Information</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Member Since</p>
+                                    <p class="mb-0">{{ user.date_joined|date:"F j, Y" }}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Last Login</p>
+                                    <p class="mb-0">{{ user.last_login|date:"F j, Y" }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Avatar Update Modal -->
+{% if user == request.user %}
+<div class="modal fade" id="updateAvatarModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update Profile Picture</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="post" action="{% url 'accounts:login' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="avatar" class="form-label">Choose new profile picture</label>
+                        <input type="file" class="form-control" id="avatar" name="avatar" accept="image/*" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-dark">Upload</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

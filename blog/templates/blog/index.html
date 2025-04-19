@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Featured Post Section -->
+<div class="w-100 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center mb-4 mb-lg-0">
+                <div>
+                    <h1 class="display-4 fw-bold font-serif">{{ featured_post.title }}</h1>
+                    <p class="lead text-muted">{{ featured_post.excerpt }}</p>
+                </div>
+                <div class="d-flex align-items-center gap-3 small">
+                    <div class="text-dark">{{ featured_post.author.first_name }}</div>
+                    <div class="text-muted">{{ featured_post.created|timesince }} ago</div>
+                </div>
+                <div class="mt-4">
+                    <a href="{% url 'blog:post_detail' featured_post.id %}" class="btn btn-dark px-4 py-2">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                {% if featured_post.image %}
+                <div class="bg-light rounded w-100" style="height: 300px;">
+                    <img src="{{ featured_post.image.url }}" class="img-fluid bg-light rounded w-100 h-100"
+                        alt="Featured Post Image">
+                </div>
+                {% else %}
+                <div class="bg-light rounded w-100" style="height: 300px;"></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Latest Posts Section -->
+<section class="container py-5">
+    <h2 class="mb-4 fw-bold font-serif">Latest Posts</h2>
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 border border-light-subtle hover-shadow-sm transition">
+                <div class="card-body">
+                    <h3 class="card-title h5 fw-bold font-serif">
+                        <a href="{% url 'blog:post_detail' post.id %}"
+                            class="text-decoration-none text-dark hover-underline">{{ post.title }}</a>
+                    </h3>
+                    <p class="card-text text-muted">{{ post.excerpt }}</p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between small text-muted">
+                    <small>{{ post.author.first_name }}</small>
+                    <small>{{ post.created|timesince }} ago</small>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
