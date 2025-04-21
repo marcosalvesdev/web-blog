@@ -4,3 +4,4 @@ media/
 code/
 db.sqlite3
 .vscode/
+.env
