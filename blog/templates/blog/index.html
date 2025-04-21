@@ -3,7 +3,7 @@
 
 {% block content %}
 <!-- Featured Post Section -->
-<div class="w-100 py-5">
+<div class="w-100 pb-0 pt-5 py-lg-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center mb-4 mb-lg-0">
@@ -21,7 +21,7 @@
             </div>
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
                 {% if featured_post.image %}
-                <div class="bg-light rounded w-100" style="height: 300px;">
+                <div class="bg-light rounded w-100 d-none d-lg-block" style="height: 300px;">
                     <img src="{{ featured_post.image.url }}" class="img-fluid bg-light rounded w-100 h-100"
                         alt="Featured Post Image">
                 </div>
@@ -34,7 +34,7 @@
 </div>
 
 <!-- Latest Posts Section -->
-<section class="container py-5">
+<section class="container pt-1 pb-5 py-lg-5">
     <h2 class="mb-4 fw-bold font-serif">Latest Posts</h2>
     <div class="row">
         {% for post in posts %}

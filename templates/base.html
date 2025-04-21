@@ -68,24 +68,22 @@
                     <a href="{% url 'blog:create_post' %}" class="text-decoration-none text-dark">Create Post</a>
                     {% endif %}
 
-                    <span>|</span>
-
                     {% if user.is_authenticated %}
                     <!-- Logout form -->
                     <form action="{% url 'accounts:logout' %}" method="post">
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-link text-decoration-none text-dark m-0 p-0">Log Out
+                        <button type="submit" class="btn btn-outline-dark border-0">Log Out
                             <i class="bi bi-door-closed"></i>
                         </button>
                     </form>
 
                     {% else %}
-                    <a href="{% url 'accounts:login'  %}" class="text-decoration-none text-dark">
+                    <a href="{% url 'accounts:login'  %}" class="btn btn-outline-dark text-decoration-none border-0">
                         Log In
                         <i class="bi bi-door-open"></i>
                     </a>
-                    <a href="{% url 'accounts:register' %}" class="text-decoration-none text-dark">
-                        Sing Up
+                    <a href="{% url 'accounts:register' %}" class="btn btn-dark text-decoration-none">
+                        Sign Up
                     </a>
                     {% endif %}
 
