@@ -165,7 +165,7 @@ if IS_PRODUCTION:
     EMAIL_HOST = env("EMAIL_HOST")
     EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
     EMAIL_USE_TLS = True
-    EMAIL_PORT = env("EMAIL_PORT", default=587)
+    EMAIL_PORT = env("EMAIL_PORT", default=587, cast=int)
 
 EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="developer@localhost.com")
 
