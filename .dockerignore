@@ -1,0 +1,17 @@
+.git
+__pycache__/
+*.pyc
+tests/
+*__py
+code/
+.vscode/
+temp*
+Makefile
+.gitignore
+.env.example
+*.sqlite3
+README.md
+DEVELOPMENT.md
+poetry.lock
+pyproject.toml
+.poetry/
