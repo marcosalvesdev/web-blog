@@ -2,7 +2,8 @@
 
 import django.db.models.deletion
 from django.conf import settings
-from django.db import migrations, models
+from django.db import migrations
+from django.db import models
 
 
 class Migration(migrations.Migration):
@@ -15,16 +16,19 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Profile',
+            name="Profile",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('avatar', models.ImageField(blank=True, null=True, upload_to='accounts/profiles/images')),
-                ('bio', models.TextField(blank=True, max_length=500)),
-                ('location', models.CharField(blank=True, max_length=100)),
-                ('website', models.URLField(blank=True)),
-                ('occupation', models.CharField(blank=True, max_length=100)),
-                ('interests', models.CharField(blank=True, max_length=200)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("avatar", models.ImageField(blank=True, null=True, upload_to="accounts/profiles/images")),
+                ("bio", models.TextField(blank=True, max_length=500)),
+                ("location", models.CharField(blank=True, max_length=100)),
+                ("website", models.URLField(blank=True)),
+                ("occupation", models.CharField(blank=True, max_length=100)),
+                ("interests", models.CharField(blank=True, max_length=200)),
+                (
+                    "user",
+                    models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
+                ),
             ],
         ),
     ]

@@ -1,20 +1,17 @@
+from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
-from django.contrib.auth.models import User
+
 from accounts.models import Profile
 
 
 class UpdateProfileViewTests(TestCase):
     def setUp(self):
         # CriaAdicione aqui testes unitários us
-        self.user = User.objects.create_user(
-            username="testuser", password="password123"
-        )
+        self.user = User.objects.create_user(username="testuser", password="password123")
         self.profile = Profile.objects.create(user=self.user, bio="Test bio")
         self.client.login(username="testuser", password="password123")
-        self.url = reverse(
-            f"accounts:profile_update {self.user.username}"
-        )  # Substitua pelo nome correto da URL
+        self.url = reverse(f"accounts:profile_update {self.user.username}")  # Substitua pelo nome correto da URL
 
     def test_update_profile_view_status_code(self):
         response = self.client.get(self.url)
@@ -22,9 +19,7 @@ class UpdateProfileViewTests(TestCase):
 
     def test_update_profile_view_template_used(self):
         response = self.client.get(self.url)
-        self.assertTemplateUsed(
-            response, "accounts/profile_update.html"
-        )  # Substitua pelo nome correto do template
+        self.assertTemplateUsed(response, "accounts/profile_update.html")  # Substitua pelo nome correto do template
 
     def test_update_profile_successful(self):
         data = {

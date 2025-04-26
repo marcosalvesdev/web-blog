@@ -1,7 +1,9 @@
-from django.views.generic import DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from blog.models import Post
+from django.views.generic import CreateView
+from django.views.generic import DetailView
+
 from blog.forms import PostForm
+from blog.models import Post
 
 
 class PostDetailView(DetailView):

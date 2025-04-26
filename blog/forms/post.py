@@ -1,6 +1,6 @@
 from django import forms
+
 from blog.models import Post
-from crispy_forms.helper import FormHelper
 
 
 class PostForm(forms.ModelForm):
@@ -8,9 +8,7 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ["title", "content", "excerpt", "image"]
         widgets = {
-            "title": forms.TextInput(
-                attrs={"class": "form-control", "placeholder": "Enter your post title"}
-            ),
+            "title": forms.TextInput(attrs={"class": "form-control", "placeholder": "Enter your post title"}),
             "excerpt": forms.Textarea(
                 attrs={
                     "class": "form-control",
