@@ -17,11 +17,15 @@
             </a>
 
             <!-- Post title -->
-            <h1 class="display-4 font-serif fw-bold mb-4">{{ post.title }}</h1>
+            <h1 class="display-6 font-serif fw-bold mb-4">{{ post.title }}</h1>
 
             <!-- Post metadata -->
             <div class="d-flex align-items-center text-muted mb-5">
-                <span class="fw-medium text-dark">{{ post.author.first_name }}</span>
+                {% if post.author.first_name %}
+                <span class="fw-medium text-dark">{{ post.author.get_full_name }}</span>
+                {% else %}
+                <span class="fw-medium text-dark">{{ post.author.username }}</span>
+                {% endif %}
                 <span class="mx-2">•</span>
                 <time>{{ post.created|timesince }} ago</time>
             </div>

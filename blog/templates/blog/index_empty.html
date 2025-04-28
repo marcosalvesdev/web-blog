@@ -1,0 +1,25 @@
+<!-- Empty Index Page -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-light-subtle shadow-sm">
+                <div class="card-body p-4 text-center">
+                    <h1 class="display-5 fw-bold font-serif mb-2">Welcome to the Blog</h1>
+                    <p class="text-muted mb-4">There are no posts available at the moment.</p>
+
+                    {% if user.is_authenticated %}
+                    <div class="mb-3">
+                        <p class="mb-4">Be the first to share your thoughts!</p>
+                        <a href="{% url 'blog:create_post' %}" class="btn btn-dark px-4 py-2">Create Your First Post</a>
+                    </div>
+                    {% else %}
+                    <div>
+                        <p class="mb-4">Sign in to start sharing your thoughts</p>
+                        <a href="{% url 'accounts:login' %}" class="btn btn-dark px-4 py-2">Sign In</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,9 @@
 run:
-	docker compose up -d --build
+	docker compose up -d
+
+build:
+	docker compose build
+	docker compose up -d
 
 init:
 	poetry install --no-root
@@ -10,6 +14,23 @@ migrate:
 
 test:
 	docker compose exec blog python manage.py test
+
+dump-model:
+	docker compose exec blog python manage.py dumpdata $(model) --indent 2 > ./fixtures/development.json
+
+dump-all:
+	docker compose exec blog python manage.py dumpdata \
+	--exclude sessions \
+	--exclude contenttypes \
+	--exclude auth.Permission \
+	--natural-foreign --natural-primary \
+	--indent 2 > ./fixtures/development.json
+
+logs:
+	docker compose logs blog -f
+
+load-fixtures:
+	docker compose exec blog python manage.py loaddata ./fixtures/development.json
 
 superuser:
 	docker compose exec blog python manage.py createsuperuser

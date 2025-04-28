@@ -2,27 +2,28 @@
 {% load static %}
 
 {% block content %}
+{% if posts %}
 <!-- Featured Post Section -->
 <div class="w-100 pb-0 pt-5 py-lg-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center mb-4 mb-lg-0">
                 <div>
-                    <h1 class="display-4 fw-bold font-serif">{{ featured_post.title }}</h1>
-                    <p class="lead text-muted">{{ featured_post.excerpt }}</p>
+                    <h1 class="display-4 fw-bold font-serif">{{ posts.first.title }}</h1>
+                    <p class="lead text-muted">{{ posts.first.excerpt }}</p>
                 </div>
                 <div class="d-flex align-items-center gap-3 small">
-                    <div class="text-dark">{{ featured_post.author.first_name }}</div>
-                    <div class="text-muted">{{ featured_post.created|timesince }} ago</div>
+                    <div class="text-dark">{{ posts.first.author.get_full_name }}</div>
+                    <div class="text-muted">{{ posts.first.created|timesince }} ago</div>
                 </div>
                 <div class="mt-4">
-                    <a href="{% url 'blog:post_detail' featured_post.id %}" class="btn btn-dark px-4 py-2">Read More</a>
+                    <a href="{% url 'blog:post_detail' posts.first.id %}" class="btn btn-dark px-4 py-2">Read More</a>
                 </div>
             </div>
-            <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                {% if featured_post.image %}
-                <div class="bg-light rounded w-100 d-none d-lg-block" style="height: 300px;">
-                    <img src="{{ featured_post.image.url }}" class="img-fluid bg-light rounded w-100 h-100"
+            <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
+                {% if posts.first.image %}
+                <div class="bg-light rounded w-100" style="height: 300px;">
+                    <img src="{{ posts.first.image.url }}" class="img-fluid bg-light rounded w-100 h-100"
                         alt="Featured Post Image">
                 </div>
                 {% else %}
@@ -37,7 +38,7 @@
 <section class="container pt-1 pb-5 py-lg-5">
     <h2 class="mb-4 fw-bold font-serif">Latest Posts</h2>
     <div class="row">
-        {% for post in posts %}
+        {% for post in posts|slice:"1:" %}
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="card h-100 border border-light-subtle hover-shadow-sm transition">
                 <div class="card-body">
@@ -48,7 +49,7 @@
                     <p class="card-text text-muted">{{ post.excerpt }}</p>
                 </div>
                 <div class="card-footer bg-transparent border-top-0 d-flex justify-content-between small text-muted">
-                    <small>{{ post.author.first_name }}</small>
+                    <small>{{ post.author.get_full_name }}</small>
                     <small>{{ post.created|timesince }} ago</small>
                 </div>
             </div>
@@ -56,4 +57,7 @@
         {% endfor %}
     </div>
 </section>
+{% else %}
+{% include "blog/index_empty.html" %}
+{% endif %}
 {% endblock %}

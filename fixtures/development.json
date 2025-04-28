@@ -1,0 +1,688 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$AjCXaECgSjjfUmBRVR6AHc$dXLpWx37m4W139Hmv16+p/HliyTWH0RxC7ugrQYeE9M=",
+    "last_login": "2025-04-28T02:28:42Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "Super",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-04-26T23:38:29Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$40mg8DXAZY4gZCZFVoby5U$WbKIz97i/IGfWHpc5GRnCZNcpYmZJamElNn//bJECYQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jane_doe",
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-28T00:38:35Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$nTUOgvv1ADuHsFcG269GN6$trRV9gTs+SKwFho1aJhTWKLUcPrRzk9O0LSlLYaxCQs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "john_smith",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-28T00:39:56Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ozQWuUnRSj1xijyCat5jQ7$XtrWT+Q9n2+1aaNeUNSgaTMwgzRzCFM2yapVunL7lrk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alex_johnson",
+    "first_name": "Alex",
+    "last_name": "Johnson",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-28T00:41:50Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "The Art of Minimalist Design",
+    "excerpt": "Exploring how less becomes more in the world of modern design aesthetics. Discover the principles that make minimalism powerful.",
+    "content": "Minimalism in design is more than just a visual aesthetic; it's a philosophy that champions the idea that less is more. By stripping away the unnecessary, we can create spaces, products, and experiences that are not only visually appealing but also more functional and meaningful.\r\n\r\nThe Origins of Minimalism\r\nWhile minimalism as we know it today gained prominence in the mid-20th century, its roots can be traced back to various movements and philosophies throughout history. From traditional Japanese aesthetics to the Bauhaus movement, the idea of simplicity and functionality has long been valued across different cultures and time periods.\r\n\r\nIn the 1960s, minimalism emerged as a significant art movement, characterized by extreme simplicity of form and a literal approach. Artists like Donald Judd and Frank Stella created works that were stripped down to their most fundamental features, often using industrial materials and simple geometric shapes.\r\n\r\nKey Principles of Minimalist Design\r\nAt its core, minimalist design adheres to several key principles:\r\n\r\nSimplicity: Eliminating unnecessary elements and focusing on what's essential.\r\nFunctionality: Ensuring that every element serves a purpose.\r\nNegative Space: Using empty space intentionally to create balance and focus.\r\nMonochromatic Color Schemes: Often limiting colors to create a cohesive and harmonious look.\r\nTypography: Using clean, simple fonts that enhance readability and aesthetic appeal.\r\nThe Impact of Minimalism Today\r\nIn our increasingly complex and fast-paced world, minimalist design offers a breath of fresh air. It helps cut through the noise and provides clarity and focus. From user interfaces to architecture, the influence of minimalism is evident across various fields.\r\n\r\nIn digital design, minimalism isn't just about aesthetics; it's about creating intuitive user experiences. By removing distractions and focusing on essential elements, designers can guide users more effectively and enhance usability.\r\n\r\nAs we continue to navigate an era of information overload, the principles of minimalist design remain as relevant as ever, reminding us of the power of simplicity and the beauty of less.",
+    "author": [
+      "jane_doe"
+    ],
+    "image": "",
+    "created": "2025-04-28T00:38:44.469Z",
+    "modified": "2025-04-28T00:38:48.296Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "Finding Inspiration in Everyday Objects",
+    "excerpt": "The world around us is filled with design inspiration. Learn how to see the extraordinary in the ordinary.",
+    "content": "The world around us is filled with design inspiration. Learn how to see the extraordinary in the ordinary.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
+    "author": [
+      "john_smith"
+    ],
+    "image": "",
+    "created": "2025-04-28T00:39:59.123Z",
+    "modified": "2025-04-28T00:39:59.123Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "The Psychology of Black and White",
+    "excerpt": "Why do monochromatic designs have such a powerful impact on our perception? A deep dive into color theory.",
+    "content": "Why do monochromatic designs have such a powerful impact on our perception? A deep dive into color theory.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
+    "author": [
+      "jane_doe"
+    ],
+    "image": "",
+    "created": "2025-04-28T00:41:01.536Z",
+    "modified": "2025-04-28T00:43:03.806Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "Typography Trends for 2023",
+    "excerpt": "Exploring the latest innovations and revivals in the world of typography and how they shape modern design.",
+    "content": "Exploring the latest innovations and revivals in the world of typography and how they shape modern design.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
+    "author": [
+      "alex_johnson"
+    ],
+    "image": "",
+    "created": "2025-04-28T00:42:03.834Z",
+    "modified": "2025-04-28T00:42:48.410Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "Balancing Form and Function",
+    "excerpt": "The eternal challenge of designers: creating works that are both beautiful and usable. Strategies for success.",
+    "content": "The eternal challenge of designers: creating works that are both beautiful and usable. Strategies for success.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
+    "author": [
+      "john_smith"
+    ],
+    "image": "",
+    "created": "2025-04-28T00:43:46.253Z",
+    "modified": "2025-04-28T00:43:46.253Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "Digital Minimalism in a Cluttered World",
+    "excerpt": "How applying minimalist principles to our digital lives can lead to better focus and well-being.",
+    "content": "How applying minimalist principles to our digital lives can lead to better focus and well-being.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
+    "author": [
+      "alex_johnson"
+    ],
+    "image": "",
+    "created": "2025-04-28T00:44:18.832Z",
+    "modified": "2025-04-28T00:44:18.832Z"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "image": "",
+    "bio": "",
+    "location": "",
+    "website": "",
+    "occupation": "",
+    "interests": ""
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "jane_doe"
+    ],
+    "image": "",
+    "bio": "",
+    "location": "",
+    "website": "",
+    "occupation": "",
+    "interests": ""
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "john_smith"
+    ],
+    "image": "",
+    "bio": "",
+    "location": "",
+    "website": "",
+    "occupation": "",
+    "interests": ""
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "alex_johnson"
+    ],
+    "image": "",
+    "bio": "",
+    "location": "",
+    "website": "",
+    "occupation": "",
+    "interests": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-04-28T00:38:36.441Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "jane_doe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-04-28T00:38:44.471Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "1",
+    "object_repr": "The Art of Minimalist Design",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-04-28T00:38:48.297Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "1",
+    "object_repr": "The Art of Minimalist Design",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-04-28T00:39:57.173Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "john_smith",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-04-28T00:39:59.124Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "2",
+    "object_repr": "Finding Inspiration in Everyday Objects",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-04-28T00:41:01.537Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "3",
+    "object_repr": "The Psychology of Black and White",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-04-28T00:41:04.194Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "3",
+    "object_repr": "The Psychology of Black and White",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-04-28T00:41:51.099Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "alex_johnson",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-04-28T00:42:03.835Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "4",
+    "object_repr": "Typography Trends for 2023",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-04-28T00:42:45.987Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "4",
+    "object_repr": "Typography Trends for 2023",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Excerpt\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-04-28T00:42:48.410Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "4",
+    "object_repr": "Typography Trends for 2023",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-04-28T00:43:03.806Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "3",
+    "object_repr": "The Psychology of Black and White",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-04-28T00:43:46.254Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "5",
+    "object_repr": "Balancing Form and Function",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-04-28T00:44:18.833Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "6",
+    "object_repr": "Digital Minimalism in a Cluttered World",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-04-28T00:54:09.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "alex_johnson",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-04-28T00:54:45.671Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "alex_johnson",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-04-28T00:54:57.106Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "alex_johnson",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-04-28T01:06:43.479Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "6",
+    "object_repr": "Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-04-28T01:06:43.479Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "5",
+    "object_repr": "Balancing Form and Function",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-04-28T01:06:43.479Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "4",
+    "object_repr": "Typography Trends for 2023",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-04-28T01:06:43.479Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "3",
+    "object_repr": "The Psychology of Black and White",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-04-28T01:06:43.479Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "2",
+    "object_repr": "Finding Inspiration in Everyday Objects",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-04-28T01:06:43.479Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "1",
+    "object_repr": "The Art of Minimalist Design",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-04-28T02:29:01.970Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-04-28T02:29:19.835Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "jane_doe",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-04-28T02:29:32.340Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "john_smith",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+}
+]
