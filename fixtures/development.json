@@ -72,6 +72,8 @@
   "pk": 1,
   "fields": {
     "title": "The Art of Minimalist Design",
+    "slug": "the-art-of-minimalist-design",
+    "category": 1,
     "excerpt": "Exploring how less becomes more in the world of modern design aesthetics. Discover the principles that make minimalism powerful.",
     "content": "Minimalism in design is more than just a visual aesthetic; it's a philosophy that champions the idea that less is more. By stripping away the unnecessary, we can create spaces, products, and experiences that are not only visually appealing but also more functional and meaningful.\r\n\r\nThe Origins of Minimalism\r\nWhile minimalism as we know it today gained prominence in the mid-20th century, its roots can be traced back to various movements and philosophies throughout history. From traditional Japanese aesthetics to the Bauhaus movement, the idea of simplicity and functionality has long been valued across different cultures and time periods.\r\n\r\nIn the 1960s, minimalism emerged as a significant art movement, characterized by extreme simplicity of form and a literal approach. Artists like Donald Judd and Frank Stella created works that were stripped down to their most fundamental features, often using industrial materials and simple geometric shapes.\r\n\r\nKey Principles of Minimalist Design\r\nAt its core, minimalist design adheres to several key principles:\r\n\r\nSimplicity: Eliminating unnecessary elements and focusing on what's essential.\r\nFunctionality: Ensuring that every element serves a purpose.\r\nNegative Space: Using empty space intentionally to create balance and focus.\r\nMonochromatic Color Schemes: Often limiting colors to create a cohesive and harmonious look.\r\nTypography: Using clean, simple fonts that enhance readability and aesthetic appeal.\r\nThe Impact of Minimalism Today\r\nIn our increasingly complex and fast-paced world, minimalist design offers a breath of fresh air. It helps cut through the noise and provides clarity and focus. From user interfaces to architecture, the influence of minimalism is evident across various fields.\r\n\r\nIn digital design, minimalism isn't just about aesthetics; it's about creating intuitive user experiences. By removing distractions and focusing on essential elements, designers can guide users more effectively and enhance usability.\r\n\r\nAs we continue to navigate an era of information overload, the principles of minimalist design remain as relevant as ever, reminding us of the power of simplicity and the beauty of less.",
     "author": [
@@ -87,6 +89,8 @@
   "pk": 2,
   "fields": {
     "title": "Finding Inspiration in Everyday Objects",
+    "slug": "finding-inspiration-in-everyday-objects",
+    "category": 1,
     "excerpt": "The world around us is filled with design inspiration. Learn how to see the extraordinary in the ordinary.",
     "content": "The world around us is filled with design inspiration. Learn how to see the extraordinary in the ordinary.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
     "author": [
@@ -102,6 +106,8 @@
   "pk": 3,
   "fields": {
     "title": "The Psychology of Black and White",
+    "slug": "the-psychology-of-black-and-white",
+    "category": 1,
     "excerpt": "Why do monochromatic designs have such a powerful impact on our perception? A deep dive into color theory.",
     "content": "Why do monochromatic designs have such a powerful impact on our perception? A deep dive into color theory.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
     "author": [
@@ -117,6 +123,8 @@
   "pk": 4,
   "fields": {
     "title": "Typography Trends for 2023",
+    "slug": "typography-trends-for-2023",
+    "category": 1,
     "excerpt": "Exploring the latest innovations and revivals in the world of typography and how they shape modern design.",
     "content": "Exploring the latest innovations and revivals in the world of typography and how they shape modern design.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
     "author": [
@@ -132,6 +140,8 @@
   "pk": 5,
   "fields": {
     "title": "Balancing Form and Function",
+    "slug": "balancing-form-and-function",
+    "category": 1,
     "excerpt": "The eternal challenge of designers: creating works that are both beautiful and usable. Strategies for success.",
     "content": "The eternal challenge of designers: creating works that are both beautiful and usable. Strategies for success.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
     "author": [
@@ -147,6 +157,8 @@
   "pk": 6,
   "fields": {
     "title": "Digital Minimalism in a Cluttered World",
+    "slug": "digital-minimalism-in-a-cluttered-world",
+    "category": 1,
     "excerpt": "How applying minimalist principles to our digital lives can lead to better focus and well-being.",
     "content": "How applying minimalist principles to our digital lives can lead to better focus and well-being.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
     "author": [
