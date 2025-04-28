@@ -1,0 +1,20 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.hover-shadow-sm:hover {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    transition: box-shadow 0.3s ease;
+}
+
+.transition {
+    transition: all 0.3s ease;
+}
+
+.hover-underline:hover {
+    text-decoration: underline !important;
+}

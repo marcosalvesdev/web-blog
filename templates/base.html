@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
     <head>
@@ -28,28 +29,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         <!-- Custom CSS -->
-        <style>
-            body {
-                font-family: 'Inter', sans-serif;
-            }
-
-            .font-serif {
-                font-family: 'Playfair Display', serif;
-            }
-
-            .hover-shadow-sm:hover {
-                box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
-                transition: box-shadow 0.3s ease;
-            }
-
-            .transition {
-                transition: all 0.3s ease;
-            }
-
-            .hover-underline:hover {
-                text-decoration: underline !important;
-            }
-        </style>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     </head>
 
     <body class="d-flex flex-column min-vh-100">
