@@ -13,7 +13,7 @@ migrate:
 	docker compose exec blog python manage.py migrate
 
 test:
-	docker compose exec blog python manage.py test
+	docker compose exec blog python manage.py test --keepdb --failfast
 
 dump-model:
 	docker compose exec blog python manage.py dumpdata $(model) --indent 2 > ./fixtures/development.json

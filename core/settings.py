@@ -175,8 +175,9 @@ EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="developer@localhost.com")
 # Development extra settings
 if DEBUG:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-    INSTALLED_APPS += ["debug_toolbar", "django_browser_reload"]
+    INSTALLED_APPS += ["django_browser_reload"]
     if not IS_TESTING:
+        INSTALLED_APPS += ["debug_toolbar"]
         MIDDLEWARE += [
             "debug_toolbar.middleware.DebugToolbarMiddleware",
             "django_browser_reload.middleware.BrowserReloadMiddleware",
