@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils import timezone
 
 
 class Post(models.Model):
@@ -20,3 +21,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return f"/post/{self.slug}/"
+
+    def save(self, **kwargs):
+        if not self.published_at and self.published:
+            self.published_at = timezone.now()
+
+        return super().save(**kwargs)

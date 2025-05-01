@@ -23,6 +23,8 @@ from django.urls import path
 from core.settings import DEBUG
 from core.settings import MEDIA_ROOT
 from core.settings import MEDIA_URL
+from core.settings import STATIC_ROOT
+from core.settings import STATIC_URL
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -36,3 +38,4 @@ if DEBUG:
     urlpatterns += [path("__reload__/", include("django_browser_reload.urls"))]
     urlpatterns += debug_toolbar_urls()
     urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
+    urlpatterns += static(STATIC_URL, document_root=STATIC_ROOT)
