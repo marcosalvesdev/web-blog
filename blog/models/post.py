@@ -8,8 +8,6 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
     tags = models.ManyToManyField("Tag", blank=True)
-    comments = models.ManyToManyField("Comment", blank=True, related_name="_comments")
-    likes = models.ManyToManyField("Like", blank=True, related_name="_likes")
     published = models.BooleanField(default=False)
     published_at = models.DateTimeField(null=True, blank=True)
     excerpt = models.TextField(max_length=300)
@@ -30,3 +28,8 @@ class Post(models.Model):
             self.published_at = timezone.now()
 
         return super().save(**kwargs)
+
+    def total_likes(self):
+        from blog.models import Like
+
+        return self.likes.filter(value=Like.LIKE).count()
