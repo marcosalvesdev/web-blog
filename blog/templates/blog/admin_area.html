@@ -19,7 +19,7 @@
                                     <th>Title</th>
                                     <th>Created at</th>
                                     <th>Status</th>
-                                    <th class="text-start">Actions</th>
+                                    <th class="text-center">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -41,9 +41,19 @@
                                     </td>
                                     <td class="text-end">
                                         <div class="d-flex gap-2 justify-content-end">
+                                            {% if user.is_staff %}
+                                            <form action="#" method="post" class="d-flex w-100">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="published"
+                                                    value="{% if post.published %}0{% else %}1{% endif %}">
+                                                <button type="submit" class="btn btn-sm btn-outline-dark w-100">
+                                                    {% if post.published %}Unpublish{% else %}Publish{% endif %}
+                                                </button>
+                                            </form>
+                                            {% endif %}
                                             <a href="{% url 'blog:update_post' post.slug %}"
-                                                class="btn btn-sm btn-outline-primary flex-grow-1">Edit</a>
-                                            <button type="button" class="btn btn-sm btn-outline-danger flex-grow-1"
+                                                class="btn btn-sm btn-outline-primary w-100">Edit</a>
+                                            <button type="button" class="btn btn-sm btn-outline-danger w-100"
                                                 data-bs-toggle="modal" data-bs-target="#deleteModal{{ post.id }}">
                                                 Delete
                                             </button>
