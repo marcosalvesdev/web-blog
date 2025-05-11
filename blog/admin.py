@@ -10,7 +10,7 @@ from blog.models import Tag
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ["title", "created", "author", "created", "modified"]
-    raw_id_fields = ["author", "category", "tags", "comments", "likes"]
+    raw_id_fields = ["author", "category", "tags"]
     prepopulated_fields = {"slug": ("title",)}
     list_filter = ["published", "created", "modified"]
     search_fields = ["title", "content"]
