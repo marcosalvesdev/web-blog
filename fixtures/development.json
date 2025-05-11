@@ -3,7 +3,7 @@
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$1000000$AjCXaECgSjjfUmBRVR6AHc$dXLpWx37m4W139Hmv16+p/HliyTWH0RxC7ugrQYeE9M=",
-    "last_login": "2025-05-01T04:07:56.769Z",
+    "last_login": "2025-05-11T16:55:02.864Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "Admin",
@@ -20,7 +20,7 @@
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$1000000$k6GVeRQEiGtVL7PvdXIVt4$eiQ5USBkFCCzp78koiGc8hbmGmE05TDJlTWe2ziS0M8=",
-    "last_login": "2025-05-01T02:55:39.639Z",
+    "last_login": "2025-05-01T07:02:30.110Z",
     "is_superuser": false,
     "username": "jane_doe",
     "first_name": "Jane",
@@ -94,9 +94,7 @@
     "image": "",
     "created": "2025-04-28T00:38:44.469Z",
     "modified": "2025-04-28T00:38:48.296Z",
-    "tags": [],
-    "comments": [],
-    "likes": []
+    "tags": []
   }
 },
 {
@@ -116,9 +114,7 @@
     "image": "",
     "created": "2025-04-28T00:39:59.123Z",
     "modified": "2025-04-28T00:39:59.123Z",
-    "tags": [],
-    "comments": [],
-    "likes": []
+    "tags": []
   }
 },
 {
@@ -138,9 +134,7 @@
     "image": "",
     "created": "2025-04-28T00:41:01.536Z",
     "modified": "2025-05-01T02:57:57.541Z",
-    "tags": [],
-    "comments": [],
-    "likes": []
+    "tags": []
   }
 },
 {
@@ -160,9 +154,7 @@
     "image": "",
     "created": "2025-04-28T00:42:03.834Z",
     "modified": "2025-04-28T00:42:48.410Z",
-    "tags": [],
-    "comments": [],
-    "likes": []
+    "tags": []
   }
 },
 {
@@ -182,9 +174,7 @@
     "image": "",
     "created": "2025-04-28T00:43:46.253Z",
     "modified": "2025-05-01T05:41:50.805Z",
-    "tags": [],
-    "comments": [],
-    "likes": []
+    "tags": []
   }
 },
 {
@@ -196,21 +186,19 @@
     "category": 1,
     "published": true,
     "published_at": "2025-05-01T05:32:08Z",
-    "excerpt": "How applying minimalist principles to our digital lives can lead to better focus and well-being.",
-    "content": "How applying minimalist principles to our digital lives can lead to better focus and well-being.\r\n\r\nThis is a placeholder for a full article. In a real blog, this would be a complete post.",
+    "excerpt": "How applying minimalist principles to our digital lives can lead to better focus.",
+    "content": "Minimalism is the art of knowing how much is just enough. Digital minimalism applies this idea to our personal technology. It's the key to living a focused life in an increasingly noisy world.\r\n\r\nIn this timely and enlightening book, the bestselling author of Deep Work introduces a philosophy for technology use that has already improved countless lives.",
     "author": [
       "alex_johnson"
     ],
     "image": "",
     "created": "2025-04-28T00:44:18.832Z",
-    "modified": "2025-05-01T05:32:09.740Z",
+    "modified": "2025-05-11T18:16:10.726Z",
     "tags": [
       1,
       2,
       3
-    ],
-    "comments": [],
-    "likes": []
+    ]
   }
 },
 {
@@ -1075,6 +1063,834 @@
     "object_repr": "Balancing Form and Function",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Published\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-05-10T21:08:13.326Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "1",
+    "object_repr": "Like object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-05-10T21:11:11.302Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "2",
+    "object_repr": "Like object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-05-10T21:11:17.320Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "3",
+    "object_repr": "Like object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-05-11T13:36:03.043Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "17",
+    "object_repr": "Like object (17)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-05-11T13:36:03.043Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "14",
+    "object_repr": "Like object (14)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-05-11T13:36:03.043Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "10",
+    "object_repr": "Like object (10)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-05-11T13:36:03.043Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "3",
+    "object_repr": "Like object (3)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-05-11T13:36:03.043Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "2",
+    "object_repr": "Like object (2)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-05-11T13:44:43.097Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "19",
+    "object_repr": "Like object (19)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Value\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-05-11T13:45:13.569Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "19",
+    "object_repr": "Like object (19)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-05-11T13:46:21.526Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "18",
+    "object_repr": "Like object (18)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Author\", \"Post\", \"Value\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-05-11T14:01:46.533Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "19",
+    "object_repr": "Like object (19)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-05-11T14:01:46.533Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "18",
+    "object_repr": "Like object (18)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-05-11T14:08:41.897Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "20",
+    "object_repr": "Like object (20)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-05-11T14:09:45.731Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "21",
+    "object_repr": "Like object (21)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-05-11T14:52:52.708Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "22",
+    "object_repr": "Like object (22)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-05-11T15:32:55.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "23",
+    "object_repr": "Like object (23)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-05-11T15:34:52.668Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "24",
+    "object_repr": "Like object (24)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-05-11T15:41:39.076Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "25",
+    "object_repr": "Like object (25)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-05-11T15:42:06.581Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "26",
+    "object_repr": "Like object (26)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-05-11T18:14:48.538Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "12",
+    "object_repr": "afadas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-05-11T18:15:17.037Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "29",
+    "object_repr": "Like object (29)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-05-11T18:15:17.037Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "28",
+    "object_repr": "Like object (28)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-05-11T18:15:17.037Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "like"
+    ],
+    "object_id": "27",
+    "object_repr": "Like object (27)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.391Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "21",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.391Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "20",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.391Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "19",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.391Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "18",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.391Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "17",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.391Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "16",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.391Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "15",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.391Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "14",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "13",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "12",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "11",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "10",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "9",
+    "object_repr": "Comment by Admin on Balancing Form and Function",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "8",
+    "object_repr": "Comment by Admin on Balancing Form and Function",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "7",
+    "object_repr": "Comment by Admin on Balancing Form and Function",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "6",
+    "object_repr": "Comment by Admin on Balancing Form and Function",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "5",
+    "object_repr": "Comment by Admin on Balancing Form and Function",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "4",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "3",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "2",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-05-11T18:15:24.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "comment"
+    ],
+    "object_id": "1",
+    "object_repr": "Comment by Admin on Digital Minimalism in a Cluttered World",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-05-11T18:16:10.728Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "6",
+    "object_repr": "Digital Minimalism in a Cluttered World",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
   }
 }
 ]
