@@ -35,8 +35,12 @@ class PostDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         post = context["object"]
-        user_post_like = post.likes.filter(post__slug=self.kwargs["slug"]).last()
         context["comment_form"] = CommentForm
+
+        if self.request.user.is_anonymous:
+            return context
+
+        user_post_like = post.likes.filter(post__slug=self.kwargs["slug"], author_id=self.request.user.id).last()
         if user_post_like:
             context["liked"] = user_post_like.value == Like.LIKE
             context["disliked"] = user_post_like.value == Like.DISLIKE

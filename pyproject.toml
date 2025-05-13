@@ -20,7 +20,11 @@ django-debug-toolbar = "^5.1.0"
 django-browser-reload = "^1.18.0"
 pre-commit = "^4.2.0"
 poetry-plugin-export = "^1.9.0"
+black = "^25.1.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"

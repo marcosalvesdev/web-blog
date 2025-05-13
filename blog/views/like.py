@@ -1,4 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import redirect
+from django.urls import reverse_lazy
 from django.views.generic.detail import SingleObjectTemplateResponseMixin
 from django.views.generic.edit import ModelFormMixin
 from django.views.generic.edit import ProcessFormView
@@ -17,8 +19,11 @@ class LikeView(
     form_class = LikeForm
     template_name = "blog/post_detail.html"
 
+    def get(self, request, *args, **kwargs):
+        return redirect(self.get_success_url())
+
     def get_success_url(self):
-        return self.object.post.get_absolute_url()
+        return reverse_lazy("blog:post_detail", kwargs={"slug": self.kwargs["slug"]})
 
     def post(self, request, *args, **kwargs):
         post = self.get_object()

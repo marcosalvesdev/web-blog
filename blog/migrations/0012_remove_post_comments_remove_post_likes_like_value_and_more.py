@@ -25,7 +25,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="like",
             name="value",
-            field=models.CharField(blank=True, choices=[(1, "Like"), (-1, "Dislike")], max_length=10, null=True),
+            field=models.CharField(
+                blank=True,
+                choices=[(1, "Like"), (-1, "Dislike")],
+                max_length=10,
+                null=True,
+            ),
         ),
         migrations.AlterField(
             model_name="comment",
@@ -42,19 +47,27 @@ class Migration(migrations.Migration):
             model_name="comment",
             name="post",
             field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, related_name="comments", to="blog.post"
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="comments",
+                to="blog.post",
             ),
         ),
         migrations.AlterField(
             model_name="like",
             name="author",
             field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, related_name="likes", to=settings.AUTH_USER_MODEL
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="likes",
+                to=settings.AUTH_USER_MODEL,
             ),
         ),
         migrations.AlterField(
             model_name="like",
             name="post",
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name="likes", to="blog.post"),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="likes",
+                to="blog.post",
+            ),
         ),
     ]

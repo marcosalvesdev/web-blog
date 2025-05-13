@@ -19,7 +19,10 @@ class Migration(migrations.Migration):
             model_name="profile",
             name="image",
             field=models.ImageField(
-                blank=True, null=True, upload_to="accounts/profiles/images", verbose_name="Profile Picture"
+                blank=True,
+                null=True,
+                upload_to="accounts/profiles/images",
+                verbose_name="Profile Picture",
             ),
         ),
     ]

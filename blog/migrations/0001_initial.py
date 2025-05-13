@@ -19,11 +19,28 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="Post",
             fields=[
-                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
                 ("title", models.CharField(max_length=200)),
                 ("content", models.TextField()),
-                ("created_date", models.DateTimeField(default=django.utils.timezone.now)),
-                ("author", models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "created_date",
+                    models.DateTimeField(default=django.utils.timezone.now),
+                ),
+                (
+                    "author",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]

@@ -15,7 +15,10 @@ class Migration(migrations.Migration):
             model_name="like",
             name="value",
             field=models.PositiveSmallIntegerField(
-                blank=True, choices=[(1, "Like"), (-1, "Dislike")], max_length=10, null=True
+                blank=True,
+                choices=[(1, "Like"), (-1, "Dislike")],
+                max_length=10,
+                null=True,
             ),
         ),
     ]

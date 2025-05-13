@@ -87,12 +87,34 @@
             </div>
             <div class="offcanvas-body">
                 <div class="d-flex flex-column gap-3">
-                    <a href="{% url 'blog:index' %}" class="text-decoration-none fs-5 text-dark">Home</a>
+                    <a href="{% url 'blog:index' %}" class="text-decoration-none text-dark">Home</a>
                     {% if user.is_authenticated %}
                     <a href="{% url 'accounts:profile' user.username %}"
-                        class="text-decoration-none fs-5 text-dark">Profile</a>
+                        class="text-decoration-none text-dark">Profile</a>
+                    <a href="{% url 'blog:create_post' %}" class="text-decoration-none text-dark">Create Post</a>
+                    <a href="{% url 'blog:admin_area' %}" class="text-decoration-none text-dark">Admin Area</a>
+                    {% else %}
                     {% endif %}
-                    <a href="{% url 'blog:create_post' %}" class="text-decoration-none fs-5 text-dark">Create Post</a>
+
+                    {% if user.is_authenticated %}
+                    <!-- Logout form -->
+                    <form action="{% url 'accounts:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-dark w-100">
+                            Log Out
+                            <i class="bi bi-door-closed"></i>
+                        </button>
+                    </form>
+
+                    {% else %}
+                    <a href="{% url 'accounts:login'  %}" class="btn btn-outline-dark text-decoration-none border-0">
+                        Log In
+                        <i class="bi bi-door-open"></i>
+                    </a>
+                    <a href="{% url 'accounts:register' %}" class="btn btn-dark text-decoration-none">
+                        Sign Up
+                    </a>
+                    {% endif %}
                 </div>
             </div>
         </div>

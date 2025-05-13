@@ -29,21 +29,27 @@ class Migration(migrations.Migration):
             model_name="comment",
             name="post",
             field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, related_name="post_comments", to="blog.post"
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="post_comments",
+                to="blog.post",
             ),
         ),
         migrations.AlterField(
             model_name="like",
             name="author",
             field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, related_name="author_likes", to=settings.AUTH_USER_MODEL
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="author_likes",
+                to=settings.AUTH_USER_MODEL,
             ),
         ),
         migrations.AlterField(
             model_name="like",
             name="post",
             field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, related_name="post_likes", to="blog.post"
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="post_likes",
+                to="blog.post",
             ),
         ),
         migrations.AlterField(
