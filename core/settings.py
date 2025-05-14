@@ -96,10 +96,10 @@ WSGI_APPLICATION = "core.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": env("POSTGRES_DB"),
-        "USER": env("POSTGRES_USER"),
-        "PASSWORD": env("POSTGRES_PASSWORD"),
-        "HOST": "db",
+        "NAME": env("POSTGRES_DB", default="blog"),
+        "USER": env("POSTGRES_USER", default="blog"),
+        "PASSWORD": env("POSTGRES_PASSWORD", default="blog"),
+        "HOST": env("POSTGRES_HOST", default="localhost"),
         "PORT": env("POSTGRES_PORT", default=5432, cast=int),
     }
 }
@@ -160,7 +160,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 # Configure authentication
 LOGIN_REDIRECT_URL = "blog:index"
 LOGIN_URL = "accounts:login"
-LOGOUT_REDIRECT_URL = "accounts:logout"
 
 # Configure email
 if IS_PRODUCTION:

@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container py-5">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col col-md-7">
             <!-- Header Section -->
             <div class="text-center mb-5">
                 <h1 class="display-5 fw-bold font-serif mb-2">Logged Out</h1>
@@ -11,14 +11,14 @@
             </div>
 
             <!-- Logout Confirmation Card -->
-            <div class="card border-light-subtle shadow-sm">
+            <div class="card border-light-subtle shadow-sm w-100">
                 <div class="card-body p-4">
                     <div class="text-center">
                         <p class="mb-4">
                             You have been logged out of your account.
                             We hope to see you again soon!
                         </p>
-                        <div class="d-flex justify-content-center gap-3">
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-2">
                             <a href="{% url 'accounts:login' %}" class="btn btn-dark py-2 px-4">Login Again</a>
                             <a href="{% url 'blog:index' %}" class="btn btn-outline-dark py-2 px-4">Back to Home</a>
                         </div>

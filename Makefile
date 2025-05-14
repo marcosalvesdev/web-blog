@@ -45,7 +45,7 @@ add-package:
 		exit 1; \
 	fi
 	poetry add $(package)
-	poetry export -f requirements.txt --output requirements-dev.txt
+	poetry export -f requirements.txt --output requirements.txt
 	@echo "Pacote '$(package)' sucesssfully added to requirements.txt"
 
 add-dev-package:
@@ -55,4 +55,4 @@ add-dev-package:
 	fi
 	poetry add $(package) --dev
 	poetry export -f requirements.txt --output requirements-dev.txt --only dev
-	@echo "Pacote '$(package)' sucesssfully added to requirements.txt"
+	@echo "Pacote '$(package)' sucesssfully added to requirements-dev.txt"
