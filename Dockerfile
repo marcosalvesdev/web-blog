@@ -13,7 +13,7 @@ COPY requirements.txt requirements-dev.txt ./
 
 RUN pip install --user --no-cache-dir -r requirements.txt --no-deps
 
-RUN if [ "$ENVIRONMENT" != "production" ]; then pip3 install --user --no-cache-dir -r requirements-dev.txt; fi
+RUN if [ "$ENVIRONMENT" != "production" ]; then pip3 install --user --no-cache-dir -r requirements-dev.txt --no-deps; fi
 
 COPY . .
 
