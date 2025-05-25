@@ -1,10 +1,7 @@
 name: Automated Tests
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  [push, pull_request]
 
 jobs:
   test:
@@ -28,3 +25,9 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test --keepdb --failfast
+    env:
+      POSTGRES_DB: blog
+      POSTGRES_USER: blog
+      POSTGRES_PASSWORD: blog
+      POSTGRES_HOST: db
+      ENVIRONMENT: development
