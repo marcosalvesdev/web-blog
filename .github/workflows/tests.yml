@@ -4,7 +4,7 @@ on:
   [push, pull_request]
 
 jobs:
-  test:
+  tests:
     name: Continuos Integration
     runs-on: ubuntu-latest
 
@@ -21,6 +21,9 @@ jobs:
     strategy:
       matrix:
         python-version: [3.13]
+
+    env:
+      ENVIRONMENT: development
 
     steps:
     - uses: actions/checkout@v4
@@ -42,10 +45,3 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test --keepdb --failfast
-
-    env:
-      POSTGRES_DB: blog
-      POSTGRES_USER: blog
-      POSTGRES_PASSWORD: blog
-      POSTGRES_HOST: db
-      ENVIRONMENT: development
