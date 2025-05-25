@@ -7,6 +7,16 @@ jobs:
   test:
     name: Continuos Integration
     runs-on: ubuntu-latest
+
+    services:
+      db:
+        image: postgres:15-alpine
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_DB: blog
+          POSTGRES_USER: blog
+          POSTGRES_PASSWORD: blog
     
     strategy:
       matrix:
@@ -14,17 +24,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
+    - name: Run Migrations
+      run: |
+        python manage.py migrate
+
     - name: Run Tests
       run: |
         python manage.py test --keepdb --failfast
+
     env:
       POSTGRES_DB: blog
       POSTGRES_USER: blog
