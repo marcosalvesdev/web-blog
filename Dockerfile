@@ -1,13 +1,15 @@
 # Builder stage
-FROM python:3.13-alpine@sha256:452682e4648deafe431ad2f2391d726d7c52f0ff291be8bd4074b10379bb89ff AS builder
+FROM python:3.13-alpine3.22@sha256:37b14db89f587f9eaa890e4a442a3fe55db452b69cca1403cc730bd0fbdc8aaf AS builder
 
 WORKDIR /app
 
 ARG ENVIRONMENT=production
 
-RUN apk update && apk add --no-cache \
+RUN apk update && apk upgrade --no-cache && apk add --no-cache \
     build-base \
     postgresql-dev
+
+RUN pip install --upgrade pip setuptools --no-cache-dir
 
 COPY requirements.txt requirements-dev.txt ./
 
@@ -18,7 +20,7 @@ RUN if [ "$ENVIRONMENT" != "production" ]; then pip3 install --user --no-cache-d
 COPY . .
 
 # Runtime stage
-FROM python:3.13-alpine@sha256:452682e4648deafe431ad2f2391d726d7c52f0ff291be8bd4074b10379bb89ff
+FROM python:3.13-alpine3.22@sha256:37b14db89f587f9eaa890e4a442a3fe55db452b69cca1403cc730bd0fbdc8aaf
 
 WORKDIR /app
 COPY --from=builder /root/.local /root/.local

@@ -46,28 +46,44 @@ IS_TESTING = env("IS_TESTING")
 
 ALLOWED_HOSTS = env("ALLOWED_HOSTS")
 
-INSTALLED_APPS = [
+DEFAULT_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+]
+
+LOCAL_APPS = [
     "blog",
     "accounts",
+]
+
+THIRD_PARTY_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
+    "corsheaders",
 ]
+
+INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+# CORS settings
+CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=["http://localhost:8080", "http://127.0.0.1:8080"])
+
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=["http://localhost:8080", "http://127.0.0.1:8080"])
 
 ROOT_URLCONF = "core.urls"
 
@@ -139,14 +155,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 STATIC_URL = "static/"
+
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Media files
 MEDIA_URL = "media/"
+
 MEDIA_ROOT = BASE_DIR / "media"
+
+# Storage settings
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -155,10 +182,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Configure crispy forms
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Configure authentication
 LOGIN_REDIRECT_URL = "blog:index"
+
 LOGIN_URL = "accounts:login"
 
 # Configure email
@@ -174,11 +203,17 @@ EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="developer@localhost.com")
 # Development extra settings
 if DEBUG:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
     INSTALLED_APPS += ["django_browser_reload"]
+
+    INSTALLED_APPS.insert(0, "whitenoise.runserver_nostatic")
+
     if not IS_TESTING:
         INSTALLED_APPS += ["debug_toolbar"]
+
         MIDDLEWARE += [
             "debug_toolbar.middleware.DebugToolbarMiddleware",
             "django_browser_reload.middleware.BrowserReloadMiddleware",
         ]
+
         INTERNAL_IPS = ["127.0.0.1", "172.18.0.1"]
